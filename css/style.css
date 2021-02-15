@@ -1,0 +1,474 @@
+/*----------------
+GENERAL SETTINGS
+-----------------*/
+body {
+	font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    overflow-x: hidden;
+    color: #868f9b;
+}
+#profilearea{
+    position:relative;
+    cursor:pointer;
+    width:150px;
+    height:150px;
+    -webkit-perspective:600px;
+    -moz-perspective:600px;
+    -o-perspective:600px;
+    -ms-perspective:600px;
+    perspective:600px;
+}
+#profilcard{
+    position:absolute;
+    width:100%;
+    height:100%;
+    -webkit-transform-style:preserve-3d;
+    -moz-transform-style:preserve-3d;
+    -o-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+    -webkit-transition:all 2s linear;
+    -moz-transition:all 2s linear;
+    -o-transition:all 2s linear;
+    -ms-transition:all 2s linear;
+    transition:all 2s linear;
+}
+#profilcard:hover{
+    -webkit-transform:rotateX(180deg);
+    -moz-transform:rotateX(180deg);
+    -o-transform:rotateX(180deg);
+    -ms-transform:rotateX(180deg);
+    transform:rotateX(180deg);
+}
+.frontface{
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    -o-border-radius:8px;
+    -ms-border-radius:8px;
+    border-radius:8px;
+    -webkit-backface-visibility:hidden;
+    -moz-backface-visibility:hidden;
+    -o-backface-visibility:hidden;
+    -ms-backface-visibility:hidden;
+    backface-visibility:hidden;
+}
+.backface{
+    position:absolute;
+    line-height:150px;
+    text-align:center;
+    background-color:grey;
+    font-size:20px;
+    color:white;
+    -webkit-transform:rotateX(180deg);
+    -moz-transform:rotateX(180deg);
+    -o-transform:rotateX(180deg);
+    -ms-transform:rotateX(180deg);
+    transform:rotateX(180deg);
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Oswald', sans-serif;
+    margin-top: 0;
+    color: #2a2a2a;
+}
+
+h1 {
+    font-size: 54px;
+}
+h2 {
+    font-size: 36px;
+}
+h3 {
+    font-size: 21px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 12px;
+}
+h6 {
+    font-size: 11px;
+}
+
+a{
+    color: #FD8A10;
+    text-decoration: none;
+    transition: .2s opacity;
+    font-size: 16px;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+    opacity: 0.8;
+    color: #FD8A10;
+}
+
+.main-color {
+    color: #FD8A10;
+}
+
+.white-text {
+    color: #fff;
+}
+
+
+::moz-selection {
+    background-color: #FD8A10;
+    color: #fff;
+}
+
+::selection {
+    background-color: #FD8A10;
+    color: #fff;
+} 
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Section Properties */
+
+section {
+    position: relative;
+}
+
+.md-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.section-header {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.section-header .title {
+    text-transform: capitalize;
+}
+
+.title::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 60px;
+    background-color: #FD8A10;
+    margin: 20px auto 0;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+.navbar-brand {
+	transition: all .5s;
+}
+
+.navbar-brand:hover {
+	color: #FD8A10!important;
+}
+
+#mainNav {
+	background-color: transparent;
+}
+
+nav.navbar-container {
+    padding: 20px 0 20px 0;
+}
+
+.navbar-container.shrink {
+    padding: 0;
+}
+
+#mainNav .navbar-toggler {
+	font-size: 12px;
+	right: 0;
+	padding: 13px;
+	text-transform: uppercase;
+	color: white;
+	border: 0;
+	background-color: #FD8A10;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+	font-size: 14px;
+	font-weight: 400;
+	padding: 12px 10px;
+	letter-spacing: 1px;
+	color: white;
+	transition: all .5s;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+	color: #FD8A10;
+}
+
+nav.shrink {
+    background-color: #FD8A10!important;
+}
+
+
+.navbar-brand.shrink,
+.navbar-container.shrink,
+.navbar.fixed-top.shrink,
+.navbar-brand,
+.navbar-container{
+    transition: 0.8s;
+    -webkit-transition:  0.8s;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
+
+#hero {
+	text-align: center;
+	color: white;
+	background: linear-gradient( rgba(20, 20, 20, .8), rgba(20, 20, 20, .8)), url("../img/heroImage.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	height: 100vh;
+}
+
+#hero .container {
+	display: table;
+	height: 100vh;
+}
+
+#hero .intro-text {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#hero .intro-heading {
+	font-size: 50px;
+	line-height: 50px;
+	margin-bottom: 25px;
+	font-weight: 200;
+}
+
+#hero .intro-heading span {
+	color: #e74c3c;
+	font-size: 62px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Buttons */
+
+.main-btn, .white-btn {
+    display: inline-block;
+    padding: 10px 35px;
+    margin: 20px;
+    border: 2px solid transparent;
+    transition: .2s opacity;
+    -webkit-transition: .2s opacity;
+}
+
+.main-btn {
+    background-color: #FD8A10;
+    color: #fff;
+}
+
+.white-btn {
+    background-color: #fff;
+    color: #FD8A10;
+}
+
+.main-btn:hover, .white-btn:hover {
+    opacity: .8;
+}
+
+/*--------------------------------------------------------------
+# ABOUT Section
+--------------------------------------------------------------*/
+
+.about {
+	padding: 0px 0px;
+	border: 1px solid #eee;
+	margin: 15px 0px;
+	cursor: pointer;
+	transition: 1s all;
+	-webkit-transition: 1s all;
+}
+
+.section-header i {
+	font-size: 36px;
+	color: #fd8a10;
+	margin-bottom: 20px;
+}
+
+.about:hover:after {
+	height: 100%;
+}
+
+.about:hover i, .about:hover p, .about:hover h3 {
+	color: white;
+}
+
+#features {
+    background-color: #eee;
+}
+
+.feature i {
+    font-size: 28px;
+    margin: 0;
+    color: #2a2a2a;
+    transition: all .4s linear;
+}
+
+.feature:hover i {
+    color: #fd8a10;
+    transform: translateX(-32px);
+}
+
+.feature h5 {
+    font-weight: 300;
+    color: #fd8a10;
+    margin: 0 0 6px 0;
+}
+
+.feature:hover h5 {
+    color: #2a2a2a;
+}
+
+/* ---------------------------
+# Statement Section
+-----------------------------*/
+
+#statement {
+    background: linear-gradient( rgba(20, 20 ,20 , .9), rgba(20, 20 ,20 , .9)),
+    url("../img/statementBG.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+#statement h4 {
+    color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+footer {
+	position: relative;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-color: #2a2a2a;
+}
+
+.footer-follow {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.footer-follow li {
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 15px
+}
+
+.footer-follow i {
+	color: #FD8A10;
+}
+
+.footer-follow li a {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 24px;
+}
+
+.footer-copyrights p{
+	text-align: center;
+	font-size: 14px;
+	margin: 0;
+	text-transform: uppercase;
+
+}
+
+/* ============================
+PAGE HEADER
+============================== */
+
+.page-image {
+	display: table;
+	width: 100%;
+
+}
+
+.page-image-about {
+    background: linear-gradient( rgba(20, 20, 20, .8), rgba(20, 20, 20, .8)), url("../img/aboutBG.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center;
+}
+
+.page-title {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+    font-size: 50px;
+	line-height: 50px;
+	margin-bottom: 25px;
+	font-weight: 200;
+}
+
+/* ============================
+ABOUT ME SECTION
+============================== */
+
+#aboutme {
+	background-color: #f2f2f2;
+}
+
+#aboutme .project-text {
+	padding: 3rem;
+	font-size: 90%;
+}
+
+.bg-main {
+background-color: #fd8a10;
+
+}
+
+/* ============================
+CONTACT SECTION
+============================== */
+
+.page-image-contact {
+    background: linear-gradient( rgba(20, 20, 20, .8), rgba(20, 20, 20, .8)), url("../img/contactBG.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
