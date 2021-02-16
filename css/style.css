@@ -197,6 +197,7 @@ nav.navbar-container {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
+    text-align: right;
 	font-size: 14px;
 	font-weight: 400;
 	padding: 12px 10px;
